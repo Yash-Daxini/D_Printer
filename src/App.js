@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HeadFoot />}>
+        <Route path='' element={<HeadFoot />}>
           <Route path='/D_Printer' element={<Home />}></Route>
           <Route path='/Printers' element={<Printers />}></Route>
           <Route path='/About' element={<About />}></Route>

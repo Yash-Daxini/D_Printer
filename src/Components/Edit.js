@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Edit = () => {
   const [obj, setObj] = useState({});
   const param = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://62da16fd5d893b27b2f0ebab.mockapi.io/printer/" + param.id)
@@ -90,7 +91,7 @@ const Edit = () => {
 
         <button
           type="submit"
-          className="btn btn-outline-success"
+          className="btn btn-outline-success w-25"
           onClick={(e) => {
             e.preventDefault();
             fetch(
@@ -117,6 +118,7 @@ const Edit = () => {
               PrinterPrice: "",
               PrinterImage: "",
             });
+            navigate("./../");
           }}
         >
           Update Printer Details

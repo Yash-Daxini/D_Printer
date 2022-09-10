@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const SinglePrinterDetail = () => {
 
@@ -75,17 +75,15 @@ const SinglePrinterDetail = () => {
                     }}>
                         Back
                     </h5>
-                    <Link to="../">
                         <button
                             className="btn btn-outline-danger mx-5 my-5 opBtn"
                             onClick={() => {
                                 Delete();
-                                navigate("./../")
+                                navigate("./../../")
                             }}
                         >
                             Delete
                         </button>
-                    </Link>
 
                     <button className="btn btn-outline-secondary mx-5 my-5 opBtn" onClick={() => {
                         navigate("./Edit");
