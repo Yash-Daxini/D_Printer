@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <>
         <div id="HomeStyle" className='bg-info py-5 px-5 text-center'>
-        <h1 data-text="Print That You Imagine py-5 my-5">Print That You Imagine</h1>
+        <h1 data-text="Print That You Imagine">Print That You Imagine</h1>
         </div>
         <div className="container-fluid bg-info text-center py-5 px-5 d-flex justify-content-center">
             

@@ -30,11 +30,11 @@ Link{
 }
 #HomeStyle h1{
     font-family: 'Poppins' , sans-serif;
-    letter-spacing: 1px;
+    /* letter-spacing: 0.5vw; */
     position: relative;
     font-size: 5vw;
     color: rgba(var(--bs-info-rgb),var(--bs-bg-opacity));
-    -webkit-text-stroke: 0.3vw white;
+    -webkit-text-stroke: 0.2vw white;
     text-transform: uppercase;
 }
 #HomeStyle h1::before{
@@ -46,16 +46,17 @@ Link{
     width: 0%;
     height: 100%;
     color: #fff;
-    -webkit-text-stroke: 5vw rgba(var(--bs-info-rgb),var(--bs-bg-opacity));
+    -webkit-text-stroke: 6vw rgba(var(--bs-info-rgb),var(--bs-bg-opacity));
     border-right: 2px solid aqua;
     overflow: hidden;
-    animation: textanimate 10s reverse infinite;
+    animation: textanimate ease-in-out 10s infinite;
+    
 }
 @keyframes textanimate {
     0%,10%,100%{
         width: 0%;
     }
-    70%,90%{
+    50%,70%,90%{
         width: 100%;
     }
 }
@@ -65,4 +66,146 @@ Link{
 }
 p{
     text-align: justify;
+}
+.header-content ul li{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header div #heading{
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+.header-content ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+}
+.header-content ul li .lilink{
+    text-decoration: none;
+    list-style: none;
+    padding: 1vw;
+    margin: 0.1vw;
+    font-size: 1.2em;
+    color: white;
+}
+.header-content ul li .lilink{
+    position: relative;
+}
+.header-content ul li .lilink::before{
+    content: '';
+    height: 5px;
+    position: absolute;
+    background: aqua;
+    width: 90%;
+    bottom: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+}
+.header-content ul li .lilink:hover::before{
+    transform: scaleX(100%);
+}
+.header div #heading:hover{
+    color: aqua;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+}
+
+.header-content ul li .lilink:hover{
+    color: aqua;
+}
+.hoverclass img{
+    height: 20vh;
+}
+.hoverclass{
+    height: 300px;
+    overflow: hidden;
+    border: none;
+    transition: transform 1s ;
+}
+.hoverclass .content{
+    transform: translateY(50%);
+    position: relative;
+}
+.col{
+    height: 400px;
+}
+.hoverclass:hover{
+    height: 370px;
+    transition: 0.5s;
+}
+.hoverclass:hover .content{
+    transform: translateY(-20%);
+    transition: transform 1s ;
+}
+
+.card .btn::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    position: absolute;
+    top: 64%;
+    left: 60%;
+    transform: translateX(0%);
+    transition: transform 1s;
+}
+.card .btn::after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    position: absolute;
+    top: 87%;
+    left: 35%;   
+    transform: translateX(0%);
+    transition: transform 1s;
+}
+.card .btn:hover::before{
+    transform: translateX(-70px);
+}
+.card .btn:hover::after{
+    transform: translateX(70px);
+    
+}
+.details{
+    position: relative;
+}
+.details .btn::before{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    top: 77%;
+    transform: translateX(-130%);
+    transition: 1s;
+}
+.details .btn::after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    top: 86%;
+    transform: translateX(130%);
+    transition: 1s;
+}
+.details .btn:hover::before{
+    border: 2px solid aqua;
+    transform: translateX(50px);
+}
+.details .btn:hover::after{
+    border: 2px solid aqua;
+    transform: translateX(-50px);
 }

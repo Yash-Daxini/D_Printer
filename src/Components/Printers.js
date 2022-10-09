@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Printers = () => {
     const [printerObj, setPrinterObj] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         fetch("https://62da16fd5d893b27b2f0ebab.mockapi.io/printer")
             .then((res) => {
@@ -14,26 +15,28 @@ const Printers = () => {
 
     const printerDetails = printerObj.map((Obj) => {
         return (
-            <div className="col-md-3">
+            <div className="col-3">
                 <Link to={"./SinglePrinterDetail/" + Obj.id} style={{ textDecoration: "none" }}>
-                    <div className="col-md-3">
-                        <div className="card my-3 hoverclass text-center border-0" style={{ width: '15rem' }}>
+                    <div className="col">
+                        <div className="card my-3 hoverclass text-center">
                             <img
                                 src={Obj.PrinterImage}
-                                className="card-img-top"
+                                className="card-img-top py-2"
                                 alt="Can't Load"
                             />
-                            <div className="card-body text-black">
-                                <h6 className="card-title text-black">
-                                    <b>{Obj.PrinterName}</b>
-                                </h6>
-                                <h6 className="card-title text-black">
-                                    {Obj.PrinterModel}
-                                </h6>
-                                {/* <hr /> */}
-                                {Obj.PrinterMaker}
+                            <h5 className="py-3 card-title text-black">
+                                <b>{Obj.PrinterName}</b>
+                            </h5>
+                            <h5 className="card-title text-black">
+                                {Obj.PrinterModel}
+                            </h5>
+                            <div className="my-4 card-body text-black content">
+                                <h5>{Obj.PrinterMaker}</h5>
                                 <hr />
-                                <h6>₹ {Obj.PrinterPrice}</h6>
+                                <h5>₹ {Obj.PrinterPrice}</h5>
+                                <button className="btn btn-outline-info" onClick={()=>{
+                                    navigate('./SinglePrinterDetail/');
+                                }}>View</button>
                             </div>
                         </div>
                     </div>
