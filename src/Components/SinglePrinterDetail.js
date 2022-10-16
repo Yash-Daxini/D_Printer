@@ -63,33 +63,36 @@ const SinglePrinterDetail = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='printerDetails'>
                     <h2 className="my-2">Detail Of Printer</h2>
                     <p className="text-black">{ans.PrinterDescription}</p>
                     <br />
                     <br />
 
-
-                    <h5 className="btn btn-outline-primary text-black mx-5 my-5 opBtn" onClick={() => {
-                        navigate("./../../")
-                    }}>
-                        Back
-                    </h5>
+                    <div className='detailsBtn'>
+                        <button className="btn btn-outline-primary text-black mx-5 my-5 opBtn" onClick={() => {
+                            navigate("./../../")
+                        }}>
+                            Back
+                        </button>
                         <button
                             className="btn btn-outline-danger mx-5 my-5 opBtn"
                             onClick={() => {
-                                Delete();
                                 navigate("./../../")
+                                Delete();
                             }}
                         >
                             Delete
                         </button>
 
-                    <button className="btn btn-outline-secondary mx-5 my-5 opBtn" onClick={() => {
-                        navigate("./Edit");
-                    }}>
-                        Edit
-                    </button>
+                        <button className="btn btn-outline-secondary mx-5 my-5 opBtn" onClick={() => {
+                            navigate("./Edit");
+                        }}>
+                            Edit
+                        </button>
+                    </div>
+
+
                 </div>
             </div>
         </>

@@ -36,7 +36,7 @@ const Printers = () => {
                                 <h5>₹ {Obj.PrinterPrice}</h5>
                                 <button className="btn btn-outline-info" onClick={()=>{
                                     navigate('./SinglePrinterDetail/');
-                                }}>View</button>
+                                }}><span>View</span></button>
                             </div>
                         </div>
                     </div>
