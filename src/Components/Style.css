@@ -1,43 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-li{
+
+li {
     list-style: none;
 }
-body{
+
+body {
     min-height: 100vh;
-    background-color: rgba(var(--bs-info-rgb),var(--bs-bg-opacity));
+    background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
 }
 
-#carouselExampleControls{
+#carouselExampleControls {
     width: 60vw;
 }
-#carouselExampleControls img{
+
+#carouselExampleControls img {
     height: 70vh;
 }
 
-#Footer{
+#Footer {
     position: relative;
     top: 100%;
     height: 110px;
-    background-color: rgba(var(--bs-info-rgb),var(--bs-bg-opacity));
+    background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
 }
-Link{
+
+Link {
     text-decoration: none;
     color: white;
 }
-#HomeStyle h1{
-    font-family: 'Poppins' , sans-serif;
+
+#HomeStyle h1 {
+    font-family: 'Poppins', sans-serif;
     /* letter-spacing: 0.5vw; */
     position: relative;
     font-size: 5vw;
-    color: rgba(var(--bs-info-rgb),var(--bs-bg-opacity));
+    color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
     -webkit-text-stroke: 0.2vw white;
     text-transform: uppercase;
 }
-#HomeStyle h1::before{
+
+#HomeStyle h1::before {
     /* letter-spacing: 0.5vw; */
     content: attr(data-text);
     position: absolute;
@@ -46,46 +53,104 @@ Link{
     width: 0%;
     height: 100%;
     color: #fff;
-    -webkit-text-stroke: 6vw rgba(var(--bs-info-rgb),var(--bs-bg-opacity));
+    -webkit-text-stroke: 6vw rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
     border-right: 2px solid aqua;
     overflow: hidden;
     animation: textanimate ease-in-out 10s infinite;
-    
+
 }
+
 @keyframes textanimate {
-    0%,10%,100%{
+
+    0%,
+    10%,
+    100% {
         width: 0%;
     }
-    50%,70%,90%{
+
+    50%,
+    70%,
+    90% {
         width: 100%;
     }
 }
-.btn{
+/* .hoverclass{
+    position: relative;
+} */
+.hoverclass:hover .ba::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 120px;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    background: linear-gradient(transparent , aqua,aqua,aqua,transparent);
+    animation: beforeAnimation 4s linear infinite;
+}
+
+@keyframes beforeAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+.hoverclass .ba::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    background: white;
+}
+.hoverclass img{
+    padding: 5%;
+}
+.hoverclass img{
+    z-index: 1;
+}
+.hoverclass .cardTitle{
+    width: 100%;
+    height: 100%;
+    color: black;
+    z-index: 1;
+}
+.hoverclass .content{
+    z-index: 1;
+}
+.btn {
     border-radius: 40px;
     width: 120px;
 }
-p{
+
+p {
     text-align: justify;
 }
-.header-content ul li{
+
+.header-content ul li {
     font-size: 20px;
     letter-spacing: 1px;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: center;
 }
-.header div #heading{
+
+.header div #heading {
     text-decoration: none;
     list-style: none;
     color: #fff;
 }
-.header-content ul{
+
+.header-content ul {
     display: flex;
     justify-content: center;
     margin-top: 1vh;
 }
-.header-content ul li .lilink{
+
+.header-content ul li .lilink {
     text-decoration: none;
     list-style: none;
     padding: 1vw;
@@ -93,10 +158,12 @@ p{
     font-size: 1.2em;
     color: white;
 }
-.header-content ul li .lilink{
+
+.header-content ul li .lilink {
     position: relative;
 }
-.header-content ul li .lilink::before{
+
+.header-content ul li .lilink::before {
     content: '';
     height: 5px;
     position: absolute;
@@ -107,48 +174,58 @@ p{
     transition: transform 0.5s ease-in-out;
     transform-origin: left;
 }
-.header-content ul li .lilink:hover::before{
+
+.header-content ul li .lilink:hover::before {
     transform: scaleX(100%);
 }
-.header div #heading:hover{
+
+.header div #heading:hover {
     color: aqua;
     letter-spacing: 1px;
     transition: 0.5s ease-in-out;
 }
 
-.header-content ul li .lilink:hover{
+.header-content ul li .lilink:hover {
     color: aqua;
 }
-.hoverclass img{
+
+.hoverclass img {
     height: 20vh;
 }
-.hoverclass{
+
+.hoverclass {
     height: 300px;
     overflow: hidden;
     border: none;
-    transition: transform 1s ;
+    transition: transform 1s;
 }
-.hoverclass .content{
+
+.hoverclass .content {
     transform: translateY(180%);
     left: 20%;
     position: absolute;
 }
-.col{
+
+.col {
     height: 380px;
 }
-.hoverclass:hover{
+
+.hoverclass:hover {
     height: 370px;
     transition: 0.5s;
 }
-.hoverclass:hover .content{
+
+.hoverclass:hover .content {
     transform: translateY(120%);
-    transition: transform 1s ;
+    transition: transform 1s;
 }
-.card{
+
+.hoverclass{
     position: relative;
 }
-.card .btn::before{
+.hoverclass .btn::before {
     content: '';
+    z-index: 1;
     width: 10px;
     height: 10px;
     border-radius: 100%;
@@ -159,35 +236,41 @@ p{
     transform: translateX(0%);
     transition: transform 1s;
 }
-.card .btn::after{
-    position: absolute;
+
+.hoverclass .btn::after {
     content: '';
+    position: absolute;
+    z-index: 1;
     width: 10px;
     height: 10px;
     border-radius: 100%;
     border: 3px solid;
-    position: absolute;
     top: 87%;
-    left: 35%;   
+    left: 35%;
     transform: translateX(0%);
     transition: transform 1s;
 }
-.card .btn:hover::before{
+
+.hoverclass .btn:hover::before {
     transform: translateX(-60px);
 }
-.card .btn:hover{
+
+.hoverclass .btn:hover {
+    z-index: 1;
     color: white;
-}
-.card .btn:hover{
+    z-index: 1;
     box-shadow: 0 0 20px aqua;
 }
-.card .btn:hover::after{
-    transform: translateX(60px);   
+
+.hoverclass .btn:hover::after {
+    transform: translateX(60px);
 }
-.detailsBtn{
+
+.detailsBtn {
     position: relative;
 }
-.detailsBtn .btn::before{
+
+.detailsBtn .btn::before {
     position: absolute;
     content: '';
     width: 10px;
@@ -198,7 +281,8 @@ p{
     transform: translateX(-130%);
     transition: 1s;
 }
-.details .btn::after{
+
+.details .btn::after {
     position: absolute;
     content: '';
     width: 10px;
@@ -209,23 +293,13 @@ p{
     transform: translateX(130%);
     transition: 1s;
 }
-.details .btn:hover::before{
+
+.details .btn:hover::before {
     border: 2px solid aqua;
     transform: translateX(50px);
 }
-.details .btn:hover::after{
+
+.details .btn:hover::after {
     border: 2px solid aqua;
     transform: translateX(-50px);
-}
-.col .card{
-    position: relative;
-}
-.col .card::before{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* left:50%; */
-    /* top : 50%; */
-    overflow: auto;
-    background-color: aqua;
 }

@@ -19,22 +19,25 @@ const Printers = () => {
                 <Link to={"./SinglePrinterDetail/" + Obj.id} style={{ textDecoration: "none" }}>
                     <div className="col">
                         <div className="card my-3 hoverclass text-center">
+                            <div className="ba"></div>
                             <img
                                 src={Obj.PrinterImage}
                                 className="card-img-top py-2"
                                 alt="Can't Load"
                             />
-                            <h5 className="py-3 card-title text-black">
-                                <b>{Obj.PrinterName}</b>
-                            </h5>
-                            <h5 className="card-title text-black">
-                                {Obj.PrinterModel}
-                            </h5>
+                            <div className="cardTitle">
+                                <h6 className="py-3 card-title text-black">
+                                    <b>{Obj.PrinterName}</b>
+                                </h6>
+                                <h6 className="card-title text-black">
+                                    {Obj.PrinterModel}
+                                </h6>
+                            </div>
                             <div className="my-4 card-body text-black content">
                                 <h5>{Obj.PrinterMaker}</h5>
                                 <hr />
                                 <h5>₹ {Obj.PrinterPrice}</h5>
-                                <button className="btn btn-outline-info" onClick={()=>{
+                                <button className="btn btn-outline-info" onClick={() => {
                                     navigate('./SinglePrinterDetail/');
                                 }}><span>View</span></button>
                             </div>
