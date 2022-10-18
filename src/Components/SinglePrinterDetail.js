@@ -8,15 +8,15 @@ const SinglePrinterDetail = () => {
     const navigate = useNavigate();
 
 
-    const fetchall = () => {
-        fetch("https://62da16fd5d893b27b2f0ebab.mockapi.io/printer")
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                setans(data);
-            });
-    };
+    // const fetchall = () => {
+    //     fetch("https://62da16fd5d893b27b2f0ebab.mockapi.io/printer")
+    //         .then((response) => {
+    //             return response.json();
+    //         })
+    //         .then((data) => {
+    //             setans(data);
+    //         });
+    // };
 
     useEffect(() => {
         fetch("https://62da16fd5d893b27b2f0ebab.mockapi.io/printer/" + params.id)
@@ -34,9 +34,7 @@ const SinglePrinterDetail = () => {
         fetch(`https://62da16fd5d893b27b2f0ebab.mockapi.io/printer/${params.id}`, {
             method: "DELETE"
         }).then((resp) => {
-            resp.json().then((result) => {
-                fetchall();
-            });
+            navigate("./../../");
         });
     };
 
@@ -78,7 +76,6 @@ const SinglePrinterDetail = () => {
                         <button
                             className="btn btn-outline-danger mx-5 my-5 opBtn"
                             onClick={() => {
-                                navigate("./../../")
                                 Delete();
                             }}
                         >

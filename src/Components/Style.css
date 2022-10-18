@@ -36,11 +36,10 @@ Link {
 
 #HomeStyle h1 {
     font-family: 'Poppins', sans-serif;
-    /* letter-spacing: 0.5vw; */
     position: relative;
     font-size: 5vw;
     color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
-    -webkit-text-stroke: 0.2vw white;
+    -webkit-text-stroke: 0.1vw white;
     text-transform: uppercase;
 }
 
@@ -54,9 +53,9 @@ Link {
     height: 100%;
     color: #fff;
     -webkit-text-stroke: 6vw rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
-    border-right: 2px solid aqua;
+    border-right: 1px solid aqua;
     overflow: hidden;
-    animation: textanimate ease-in-out 10s infinite;
+    animation: textanimate ease-in 10s infinite;
 
 }
 
@@ -74,9 +73,6 @@ Link {
         width: 100%;
     }
 }
-/* .hoverclass{
-    position: relative;
-} */
 .hoverclass:hover .ba::before {
     content: '';
     position: absolute;
@@ -88,12 +84,11 @@ Link {
     background: linear-gradient(transparent , aqua,aqua,aqua,transparent);
     animation: beforeAnimation 4s linear infinite;
 }
-
 @keyframes beforeAnimation {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
-
+    
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -101,11 +96,11 @@ Link {
 .hoverclass .ba::after {
     content: '';
     position: absolute;
-    inset: 10px;
+    inset: 3px;
     background: white;
 }
 .hoverclass img{
-    padding: 5%;
+    padding: 10%;
 }
 .hoverclass img{
     z-index: 1;
