@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +8,10 @@ li {
     list-style: none;
 }
 
-body {
+#imageBox {
     min-height: 100vh;
     background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
+    border-radius: 0 0 40% 40%;
 }
 
 #carouselExampleControls {
@@ -20,20 +20,68 @@ body {
 
 #carouselExampleControls img {
     height: 70vh;
+    border-radius: 10%;
 }
 
 #Footer {
     position: relative;
-    top: 100%;
-    height: 110px;
+    display: flex;
+    justify-content: center;
+    gap: 12vw;
+    /* top: 100%; */
+    /* height: 110px; */
     background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
 }
-
+#Footer .footerUl{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footerlink li{
+    list-style: none;
+    color: white;
+}
+.footerlink{
+    text-decoration: none;
+}
+.footer1outer{
+    margin-top: 1%;
+    margin-left: 5vw;
+    position: relative;
+    width: 20%;
+}
+.footer1outer .footer1::after{
+    content: '';
+    position: absolute;
+    width: 1%;
+    height: 90%;
+    left: 130%;
+    bottom: 5%;
+    background-color: white;
+}
+#footer2outer{
+    margin-top: 1%;
+    margin-left: 5vw;
+    position: relative;
+    width: 20%;
+}
+#footer2outer #footer2::after{
+    content: '';
+    position: absolute;
+    width: 1%;
+    height: 90%;
+    left: 150%;
+    bottom: 5%;
+    background-color: white;
+}
+#footer3{
+    margin-top: 1%;
+    width: 30%;
+}
 Link {
     text-decoration: none;
     color: white;
 }
-
 #HomeStyle h1 {
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -72,6 +120,38 @@ Link {
     90% {
         width: 100%;
     }
+}
+.LatestProductImg{
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    gap: 5%;
+}
+.LatestProductImg img{
+    width: 40vw;
+}
+.homeImgL1,.homeImgL2{
+    display: flex;
+    justify-content: center;
+}
+.homeImgL1 .homeImg{
+    width: 30%;
+    border: none;
+}
+.homeImgL2 img{
+    width: 90vw;
+}
+.topProducts{
+    display: flex;
+    justify-content: center;
+}
+.topProducts .productImg{
+    width: 20%;
+    border: none;
+}
+.topProducts .productImg img{
+    border-radius: 50%;
 }
 .hoverclass:hover .ba::before {
     content: '';
@@ -124,7 +204,7 @@ p {
 }
 
 .header-content ul li {
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 1px;
 }
 
@@ -142,7 +222,7 @@ p {
 .header-content ul {
     display: flex;
     justify-content: center;
-    margin-top: 1vh;
+    margin-top: 0.5vh;
 }
 
 .header-content ul li .lilink {
@@ -160,7 +240,7 @@ p {
 
 .header-content ul li .lilink::before {
     content: '';
-    height: 5px;
+    height: 2px;
     position: absolute;
     background: aqua;
     width: 90%;
@@ -173,11 +253,12 @@ p {
 .header-content ul li .lilink:hover::before {
     transform: scaleX(100%);
 }
-
+.header div #heading{
+    transition: 0.7s;
+    letter-spacing: 1px;
+}
 .header div #heading:hover {
     color: aqua;
-    letter-spacing: 1px;
-    transition: 0.5s ease-in-out;
 }
 
 .header-content ul li .lilink:hover {
@@ -185,7 +266,7 @@ p {
 }
 
 .hoverclass img {
-    height: 20vh;
+    height: 23vh;
 }
 
 .hoverclass {
@@ -206,12 +287,12 @@ p {
 }
 
 .hoverclass:hover {
-    height: 370px;
+    height: 400px;
     transition: 0.5s;
 }
 
 .hoverclass:hover .content {
-    transform: translateY(120%);
+    transform: translateY(130%);
     transition: transform 1s;
 }
 
@@ -249,7 +330,9 @@ p {
 .hoverclass .btn:hover::before {
     transform: translateX(-60px);
 }
-
+.hoverclass:hover .btn{
+    padding: 5%;
+}
 .hoverclass .btn:hover {
     z-index: 1;
     color: white;
@@ -297,4 +380,56 @@ p {
 .details .btn:hover::after {
     border: 2px solid aqua;
     transform: translateX(-50px);
+}
+#footer3 ul li{
+    position: relative;
+}
+#footer3 ul li i{
+    color: #fff;
+}
+#footer3 ul li i::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 1%;
+    left: 45%;
+    transition: 0.5s;
+    transform: translateX(0%);
+    background-color: #fff;
+}
+#footer3 ul li i:hover::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 1%;
+    left: 45%;
+    transform: translateY(30px);
+    transition: 0.5s;
+    color: white;
+}
+#footer3 ul li .fa-instagram:hover::after{
+    background-color:#dd207b;
+}
+#footer3 ul li .fa-whatsapp:hover::after{
+    background-color:#25d366;
+}
+#footer3 ul li .fa-twitter:hover::after{
+    background-color:#1da1f2;
+}
+#footer3 ul li .fa-youtube-play:hover::after{
+    background-color:#ff0000;
+}
+
+#footer3 ul li .fa-instagram:hover{
+    color:#dd207b;
+}
+#footer3 ul li .fa-whatsapp:hover{
+    color:#25d366;
+}
+#footer3 ul li .fa-twitter:hover{
+    /* background-color: #fff; */
+    color:#1da1f2;
+}
+#footer3 ul li .fa-youtube-play:hover{
+    color:#ff0000;
 }
