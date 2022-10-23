@@ -2,9 +2,9 @@ const Contact = () => {
     return (
         <div className="text-center">
         <h1 className="fw-bold my-4">Contact Us</h1>
-        <div className="container text-center d-flex flex-column justify-content-center align-items-center">
+        <div className="container-md text-center d-flex flex-column justify-content-center align-items-center">
 
-            <div class="card text-center my-4 w-50">
+            <div class="card text-center my-4 w-75">
                 <div class="card-header">
                     <h3>Our Office</h3>
                 </div>

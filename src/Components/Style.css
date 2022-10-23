@@ -343,11 +343,22 @@ p {
 .hoverclass .btn:hover::after {
     transform: translateX(60px);
 }
-
+.details{
+    display: flex;
+    justify-content: left;
+    /* d-flex justify-content-left */
+}
+/* .singlehoverclass{
+    width: 50%;
+    margin: 1%;
+    padding: 3%;
+} */
 .detailsBtn {
     position: relative;
 }
-
+.detailsBtn .btn{
+    margin: 5%;
+}
 .detailsBtn .btn::before {
     position: absolute;
     content: '';
@@ -391,21 +402,31 @@ p {
     content: '';
     position: absolute;
     width: 10%;
-    height: 1%;
+    height: 5%;
     left: 45%;
     transition: 0.5s;
     transform: translateX(0%);
-    background-color: #fff;
+}
+#footer3 ul li .fa-instagram::after{
+    background-color: #dd207b;
+}
+#footer3 ul li .fa-whatsapp::after{
+    background-color: #25d366;
+}
+#footer3 ul li .fa-twitter::after{
+    background-color: #1da1f2;
+}
+#footer3 ul li .fa-youtube-play::after{
+    background-color: #ff0000;
 }
 #footer3 ul li i:hover::after{
     content: '';
     position: absolute;
     width: 10%;
-    height: 1%;
+    height: 5%;
     left: 45%;
     transform: translateY(30px);
     transition: 0.5s;
-    color: white;
 }
 #footer3 ul li .fa-instagram:hover::after{
     background-color:#dd207b;
@@ -433,3 +454,58 @@ p {
 #footer3 ul li .fa-youtube-play:hover{
     color:#ff0000;
 }
+@media (max-width: 700px) {
+    *{
+        margin: 0;
+        padding: 0;
+        width: auto;
+        overflow-x: hidden;
+    }
+    #Footer{
+        display: block;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+        text-align: center;
+    }
+    .footer1outer,#footer2outer,#footer3{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .header{
+        display: block;
+    }
+    .col-sm-3{
+        position: relative;
+    }
+    .hoverclass{
+        float: left;
+        float: right;
+    }
+    .details{
+        display: block;
+        width: 100%;
+        margin: 1%;
+    }
+    .detailsBtn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .detailsBtn .btn{
+        display: block;
+        margin: 3%;
+    }
+    .detailsBtn .btn::before{
+        visibility: hidden;
+    }
+    .details .btn::after{
+        visibility: hidden;
+    }
+    .allcard{
+        display: flex;
+        justify-content: center;
+    }
+  }

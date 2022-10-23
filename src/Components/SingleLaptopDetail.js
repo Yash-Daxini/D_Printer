@@ -29,9 +29,9 @@ const SingleLaptopDetail = () => {
 
     return (
         <>
-            <div className="container d-flex justify-content-left my-3 details">
-                <div className="col-md-3">
-                    <div className="card my-3 mx-3 singlehoverclass text-center border-0 pcard">
+            <div className="container-md my-3 details">
+                <div className="col-md-3 singlecardcontent">
+                    <div className="card my-3 mx-3 text-center border-0 pcard">
                         <img
                             src={ans.LaptopImage}
                             className="card-img-top"
@@ -50,20 +50,20 @@ const SingleLaptopDetail = () => {
                         </div>
                     </div>
                 </div>
-                <div className='printerDetails'>
+                <div className='printerDetails container-md'>
                     <h2 className="my-2">Detail Of Laptop</h2>
                     <p className="text-black">{ans.LaptopDescription}</p>
                     <br />
                     <br />
 
                     <div className='detailsBtn'>
-                        <button className="btn btn-outline-primary text-black mx-5 my-5 opBtn" onClick={() => {
+                        <button className="btn btn-outline-primary text-black opBtn" onClick={() => {
                             navigate("./../../")
                         }}>
                             Back
                         </button>
                         <button
-                            className="btn btn-outline-danger mx-5 my-5 opBtn"
+                            className="btn btn-outline-danger opBtn"
                             onClick={() => {
                                 Delete();
                             }}
@@ -71,7 +71,7 @@ const SingleLaptopDetail = () => {
                             Delete
                         </button>
 
-                        <button className="btn btn-outline-secondary mx-5 my-5 opBtn" onClick={() => {
+                        <button className="btn btn-outline-secondary  opBtn" onClick={() => {
                             navigate("./EditLaptop");
                         }}>
                             Edit

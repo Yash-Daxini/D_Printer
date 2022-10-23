@@ -29,9 +29,9 @@ const SinglePrinterDetail = () => {
 
     return (
         <>
-            <div className="container d-flex justify-content-left my-3 details">
-                <div className="col-md-3">
-                    <div className="card my-3 mx-3 singlehoverclass text-center border-0 pcard">
+            <div className="container-md my-3 details">
+                <div className="col-md-3 singlecardcontent">
+                    <div className="card my-3 mx-3 text-center border-0 pcard">
                         <img
                             src={ans.PrinterImage}
                             className="card-img-top"

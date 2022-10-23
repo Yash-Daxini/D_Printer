@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="container text-center">
+        <div className="container-md text-center">
             <h1 className="my-4 fw-bold">About Us</h1>
 
             <p>PrintOnWeb.in - a division of India Int-Tech Pvt Ltd provides online documents printing and binding solution to all over India. We print book, documents, letter head, presentation, certificates, poster, Leaflets & flyers and so on. Here you have to upload your document to our website and select the print setting for your printout, make the payment and wait for your amazing prinouts at your provided address. We provide printouts of your uploaded documents to all over India.</p>

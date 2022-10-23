@@ -4,10 +4,13 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg bg-info header">
                 <div className='m-3'>
-                    <Link id='heading' className="fs-2 fw-bold" to="./D_Printer">D Printers</Link>
+                    <Link id='heading' className="fs-2 mx-2 fw-bold" to="./D_Printer">D Printers</Link>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <div className="header-content">
-                    <ul className="m-4">
+                <div className="collapse navbar-collapse header-content" id="navbarSupportedContent">
+                    <ul className="m-4 navbar-nav">
                         <li className='nav-item'>
                             <Link className=" lilink " aria-current="page" to="./D_Printer">Home</Link>
                         </li>

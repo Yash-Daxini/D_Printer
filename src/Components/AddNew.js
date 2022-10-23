@@ -8,12 +8,12 @@ const AddNew = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="text-center container my-3">
+    <div className="text-center container-md my-3">
       {previewObj === 0 ? <h1 className="my-3">Fill The Card To Add Printer And It's Features</h1> : <h1 className="my-3">Your Card Preview</h1>}
 
       {previewObj === 0 ?
-        <div className="d-flex justify-content-center flex-column align-items-center">
-          <div className="card my-3 mx-3 w-50">
+        <div className="container-md d-flex justify-content-center flex-column align-items-center">
+          <div className="card my-1 mx-1 w-100 border-0">
             <div className="card-body">
               <label htmlFor="exampleInputEmail1" className="form-label my-2">
                 Enter Image URL
@@ -88,7 +88,7 @@ const AddNew = () => {
 
             </div>
           </div>
-          <div className="text-center w-50">
+          <div className="text-center w-100">
             <label htmlFor="exampleInputEmail1" className="form-label my-2">
               Enter Printer Description
             </label>
@@ -98,7 +98,7 @@ const AddNew = () => {
           </div>
         </div>
         :
-        <div className="container w-50">
+        <div className="container-md w-75">
           <div className="card my-3 mx-3 text-center border-0">
             <img
               src={obj.PrinterImage}
@@ -125,7 +125,7 @@ const AddNew = () => {
 
       <button
         type="submit"
-        className="btn btn-outline-success my-4 w-25"
+        className="btn btn-outline-success my-4 w-50"
         onClick={(e) => {
           e.preventDefault();
           fetch(
@@ -160,7 +160,7 @@ const AddNew = () => {
         Add Printer Details
       </button>
 
-      <button className="mx-4 my-4 btn btn-outline-info w-25" onClick={() => {
+      <button className="mx-4 my-4 btn btn-outline-info w-50" onClick={() => {
         if (previewObj === 1) {
           setPreviewObj(0);
         }
@@ -174,7 +174,7 @@ const AddNew = () => {
 
 
 
-      <button className="mx-4 my-4 btn btn-outline-info w-25" onClick={() => {
+      <button className="mx-4 my-4 btn btn-outline-info w-50" onClick={() => {
         navigate("./../Printers")
       }}>
         Go To See Your Changes
