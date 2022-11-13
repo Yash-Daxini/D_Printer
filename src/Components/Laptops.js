@@ -19,10 +19,11 @@ const Laptops = () => {
 
     const laptopDetails = laptopObj.map((Obj) => {
         return (
-            <div className="col-md-3">
+            <div className="col-md-3 allLaptops">
                 <Link to={"./SingleLaptopDetail/" + Obj.id} style={{ textDecoration: "none" }}>
-                    <div className="col allcard">
+                    <div className="col allcard laptops">
                         <div className="card my-3 hoverclass laptopImg text-center">
+                            <span className="ribbon"></span>
                             <div className="ba"></div>
                             <img
                                 src={Obj.LaptopImage}

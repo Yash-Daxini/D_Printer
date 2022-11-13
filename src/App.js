@@ -12,6 +12,7 @@ import Edit from './Components/Edit';
 import EditLaptop from './Components/EditLaptop';
 import AddNew from './Components/AddNew';
 import AddNewLaptop from './Components/AddNewLaptop';
+import WaitingPage from './Components/WaitingPage';
 
 function App() {
   return (
@@ -27,8 +28,10 @@ function App() {
           <Route path='/D_Printer/AddNew' element={<AddNew />}></Route>
           <Route path='/D_Printer/AddNewLaptop' element={<AddNewLaptop />}></Route>
           <Route path='/D_Printer/Printers/SinglePrinterDetail/:id' element={<SinglePrinterDetail />}></Route>
+          <Route path='/D_Printer/Printers/SinglePrinterDetail/:id/Edit/WaitingPage' element={<WaitingPage />}></Route>
           <Route path='/D_Printer/Printers/SinglePrinterDetail/:id/Edit' element={<Edit />}></Route>
           <Route path='/D_Printer/Laptops/SingleLaptopDetail/:id' element={<SingleLaptopDetail />}></Route>
+          <Route path='/D_Printer/Laptops/SingleLaptopDetail/:id/EditLaptop/WaitingPage' element={<WaitingPage />}></Route>
           <Route path='/D_Printer/Laptops/SingleLaptopDetail/:id/EditLaptop' element={<EditLaptop />}></Route>
         </Route>
       </Routes>

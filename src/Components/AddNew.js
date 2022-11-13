@@ -56,7 +56,6 @@ const AddNew = () => {
                   setObj({ ...obj, PrinterModel: e.target.value });
                 }}
               />
-              <hr />
               <label htmlFor="exampleInputEmail1" className="form-label my-2">
                 Enter Printer Maker
               </label>
@@ -70,7 +69,6 @@ const AddNew = () => {
                   setObj({ ...obj, PrinterMaker: e.target.value });
                 }}
               />
-              <hr />
               <label htmlFor="exampleInputEmail1" className="form-label my-2">
                 Enter Printer Price
               </label>
@@ -84,8 +82,6 @@ const AddNew = () => {
                   setObj({ ...obj, PrinterPrice: e.target.value });
                 }}
               />
-              <hr />
-
             </div>
           </div>
           <div className="text-center w-100">

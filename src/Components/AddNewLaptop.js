@@ -56,7 +56,6 @@ const AddNewLaptop = () => {
                   setObj({ ...obj, LaptopModel: e.target.value });
                 }}
               />
-              <hr />
               <label htmlFor="exampleInputEmail1" className="form-label my-2">
                 Enter Laptop Maker
               </label>
@@ -70,7 +69,6 @@ const AddNewLaptop = () => {
                   setObj({ ...obj, LaptopMaker: e.target.value });
                 }}
               />
-              <hr />
               <label htmlFor="exampleInputEmail1" className="form-label my-2">
                 Enter Laptop Price
               </label>
@@ -84,7 +82,6 @@ const AddNewLaptop = () => {
                   setObj({ ...obj, LaptopPrice: e.target.value });
                 }}
               />
-              <hr />
 
             </div>
           </div>
@@ -110,9 +107,7 @@ const AddNewLaptop = () => {
                 <b>{obj.LaptopName}</b>
               </h5>
               <h5 className="card-title text-black">{obj.LaptopModel}</h5>
-              <hr />
               {obj.LaptopMaker}
-              <hr />
               <h6>₹ {obj.LaptopPrice}</h6>
               {/* <button className="mx-4 my-2 btn btn-outline-info w-50">Add Printer Details</button>
               <button className="mx-4 my-2 btn btn-outline-info w-50">Go To See Your Changes</button> */}
@@ -121,7 +116,6 @@ const AddNewLaptop = () => {
         </div>
       }
 
-      <hr />
 
       <button
         type="submit"

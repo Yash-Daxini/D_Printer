@@ -15,10 +15,11 @@ const Printers = () => {
 
     const printerDetails = printerObj.map((Obj) => {
         return (
-            <div className="col-md-3">
+            <div className="col-md-3 allPrinters">
                 <Link to={"./SinglePrinterDetail/" + Obj.id} style={{ textDecoration: "none" }}>
                     <div className="col allcard">
                         <div className="card my-3 hoverclass text-center">
+                            <span className="ribbon"></span>
                             <div className="ba"></div>
                             <img
                                 src={Obj.PrinterImage}

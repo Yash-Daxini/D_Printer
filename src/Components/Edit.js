@@ -118,7 +118,10 @@ const Edit = () => {
               PrinterPrice: "",
               PrinterImage: "",
             });
-            navigate("./../");
+            navigate("./WaitingPage");
+            setTimeout(() => {
+              navigate("/D_Printer/Printers/SinglePrinterDetail/"+param.id);
+            }, 4000);
           }}
         >
           Update Printer Details

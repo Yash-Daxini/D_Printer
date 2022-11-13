@@ -4,8 +4,8 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg bg-info header">
                 <div className='m-3'>
-                    <Link id='heading' className="fs-2 mx-2 fw-bold" to="./D_Printer">D Printers</Link>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <Link id='heading' className="fs-2 mx-5 fw-bold" to="./D_Printer">D Printers</Link>
+                    <button class="mx-4 navbar-toggler bg-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
