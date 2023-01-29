@@ -34,8 +34,8 @@ const Printers = () => {
                                     {Obj.PrinterModel}
                                 </h6>
                             </div>
-                            <div className="my-4 card-body text-black content">
-                                <h5>{Obj.PrinterMaker}</h5>
+                            <div className="card-body text-black content">
+                                {/* <h5>{Obj.PrinterMaker}</h5> */}
                                 <hr />
                                 <h5>₹ {Obj.PrinterPrice}</h5>
                                 <button className="btn btn-outline-info" onClick={() => {

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const EditLaptop = () => {
   const [obj, setObj] = useState({});
@@ -106,7 +107,22 @@ const EditLaptop = () => {
                   body: JSON.stringify(obj)
                 }
               ).then((res) => {
-                console.log(res.status);
+                // console.log(res.status);
+                if( res.status === 200 ){
+                  Swal.fire(
+                    'Updated!',
+                    'Data Updated Successfully!',
+                    'success'
+                  )
+                }
+                else{
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops... Some error occured',
+                    text: "Something went wrong! Can't Update Data. "
+                  })
+                }
+                navigate("/D_Printer/Laptops/SingleLaptopDetail/" + param.id);
                 res.json().then((data) => {
                 });
               });
@@ -120,10 +136,10 @@ const EditLaptop = () => {
                 LaptopImage: "",
               });
               // navigate("./../");
-              navigate("./WaitingPage");
-              setTimeout(() => {
-                navigate("/D_Printer/Laptops/SingleLaptopDetail/" + param.id);
-              }, 4000);
+              // navigate("./WaitingPage");
+              // setTimeout(() => {
+              //   navigate("/D_Printer/Laptops/SingleLaptopDetail/" + param.id);
+              // }, 4000);
             }}
           >
             Update Laptop Details

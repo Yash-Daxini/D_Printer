@@ -13,7 +13,7 @@ const Laptops = () => {
             })
             .then((data)=>{
                 setLaptopObj(data);
-                console.log(data);
+                // console.log(data);
             })
     },[])
 
@@ -34,12 +34,12 @@ const Laptops = () => {
                                 <h6 className="py-3 card-title text-black">
                                     <b>{Obj.LaptopName}</b>
                                 </h6>
-                                <h6 className="card-title text-black">
+                                {/* <h6 className="card-title text-black">
                                     {Obj.LaptopModel}
-                                </h6>
+                                </h6> */}
                             </div>
-                            <div className="my-4 card-body text-black content">
-                                <h5>{Obj.LaptopMaker}</h5>
+                            <div className="card-body text-black content">
+                                {/* <h5>{Obj.LaptopMaker}</h5> */}
                                 <hr />
                                 <h5>₹ {Obj.LaptopPrice}</h5>
                                 <button className="btn btn-outline-info" onClick={() => {

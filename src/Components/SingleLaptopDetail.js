@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 const SingleLaptopDetail = () => {
 
@@ -23,6 +24,21 @@ const SingleLaptopDetail = () => {
         fetch(`https://62da16fd5d893b27b2f0ebab.mockapi.io/laptop/${params.id}`, {
             method: "DELETE"
         }).then((resp) => {
+            // console.log( resp.status );
+            if( resp.status === 200 ){
+                Swal.fire(
+                    'Deleted!',
+                    'Your Data has been deleted.',
+                    'success'
+                )
+            }
+            else{
+                Swal.fire(
+                    'Error!',
+                    "Some error occured! Your Data Can't bee deleted.",
+                    'error'
+                )
+            }
             navigate("./../../");
         });
     };
@@ -38,7 +54,7 @@ const SingleLaptopDetail = () => {
                             alt="Can't Load"
                         />
                         <div className="card-body text-black">
-                            <h5 className="card-title text-black">
+                            <h5 className="my-2 card-title text-black">
                                 <b>{ans.LaptopName}</b>
                             </h5>
                             <h5 className="card-title text-black">{ans.LaptopModel}</h5>
@@ -65,7 +81,19 @@ const SingleLaptopDetail = () => {
                         <button
                             className="btn btn-outline-danger opBtn"
                             onClick={() => {
-                                Delete();
+                                Swal.fire({
+                                    title: 'Are you sure?',
+                                    text: "You won't be able to revert this!",
+                                    icon: 'warning',
+                                    showCancelButton: true,
+                                    confirmButtonColor: '#3085d6',
+                                    cancelButtonColor: '#d33',
+                                    confirmButtonText: 'Yes, delete it!'
+                                  }).then((result) => {
+                                    if (result.isConfirmed) {
+                                      Delete();
+                                    }
+                                  })
                             }}
                         >
                             Delete

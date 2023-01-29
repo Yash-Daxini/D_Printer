@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 
 const AddNew = () => {
@@ -136,6 +137,20 @@ const AddNew = () => {
             }
           ).then((res) => {
             console.log(res.status);
+            if( res.status === 201 ){
+              Swal.fire(
+                'Inserted!',
+                'Data Inserted Successfully!',
+                'success'
+              )
+            }
+            else{
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops... Some error occured',
+                text: "Something went wrong! Can't Insert Data. "
+              })
+            }
             res.json().then((data) => {
             });
           });

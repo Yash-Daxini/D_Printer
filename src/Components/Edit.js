@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const Edit = () => {
   const [obj, setObj] = useState({});
@@ -105,7 +106,22 @@ const Edit = () => {
                 body: JSON.stringify(obj)
               }
             ).then((res) => {
-              console.log(res.status);
+              // console.log(res.status);
+              if( res.status === 200 ){
+                Swal.fire(
+                  'Updated!',
+                  'Data Updated Successfully!',
+                  'success'
+                )
+              }
+              else{
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Oops... Some error occured',
+                  text: "Something went wrong! Can't Update Data. "
+                })
+              }
+              navigate("/D_Printer/Printers/SinglePrinterDetail/"+param.id);
               res.json().then((data) => {
               });
             });
@@ -118,10 +134,10 @@ const Edit = () => {
               PrinterPrice: "",
               PrinterImage: "",
             });
-            navigate("./WaitingPage");
-            setTimeout(() => {
-              navigate("/D_Printer/Printers/SinglePrinterDetail/"+param.id);
-            }, 4000);
+            // navigate("./WaitingPage");
+            // setTimeout(() => {
+            //   navigate("/D_Printer/Printers/SinglePrinterDetail/"+param.id);
+            // }, 4000);
           }}
         >
           Update Printer Details

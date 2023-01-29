@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 
 const AddNewLaptop = () => {
@@ -95,7 +96,7 @@ const AddNewLaptop = () => {
           </div>
         </div>
         :
-        <div className="container w-100">
+        <div className="container w-50">
           <div className="card my-3 mx-3 text-center border-0">
             <img
               src={obj.LaptopImage}
@@ -134,6 +135,20 @@ const AddNewLaptop = () => {
             }
           ).then((res) => {
             // console.log(res.status);
+            if( res.status === 201 ){
+              Swal.fire(
+                'Inserted!',
+                'Data Inserted Successfully!',
+                'success'
+              )
+            }
+            else{
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops... Some error occured',
+                text: "Something went wrong! Can't Insert Data. "
+              })
+            }
             res.json().then((data) => {
             });
           });

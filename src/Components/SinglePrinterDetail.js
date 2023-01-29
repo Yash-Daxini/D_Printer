@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 const SinglePrinterDetail = () => {
 
@@ -23,6 +24,20 @@ const SinglePrinterDetail = () => {
         fetch(`https://62da16fd5d893b27b2f0ebab.mockapi.io/printer/${params.id}`, {
             method: "DELETE"
         }).then((resp) => {
+            if( resp.status === 200 ){
+                Swal.fire(
+                    'Deleted!',
+                    'Your Data has been deleted.',
+                    'success'
+                )
+            }
+            else{
+                Swal.fire(
+                    'Error!',
+                    "Some error occured! Your Data Can't bee deleted.",
+                    'error'
+                )
+            }
             navigate("./../../");
         });
     };
@@ -65,7 +80,19 @@ const SinglePrinterDetail = () => {
                         <button
                             className="btn btn-outline-danger mx-5 my-5 opBtn"
                             onClick={() => {
-                                Delete();
+                                Swal.fire({
+                                    title: 'Are you sure?',
+                                    text: "You won't be able to revert this!",
+                                    icon: 'warning',
+                                    showCancelButton: true,
+                                    confirmButtonColor: '#3085d6',
+                                    cancelButtonColor: '#d33',
+                                    confirmButtonText: 'Yes, delete it!'
+                                  }).then((result) => {
+                                    if (result.isConfirmed) {
+                                      Delete();
+                                    }
+                                  })
                             }}
                         >
                             Delete

@@ -14,7 +14,13 @@ li {
     background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
     border-radius: 0 0 40% 40%;
 }
-
+/* .dropdown , .dropdown-menu{
+    background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
+}
+.dropdown .dropdown-item , .dropdown-menu .dropdown-item{
+    color: #fff;
+    background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
+} */
 #carouselExampleControls {
     width: 60vw;
 }
@@ -112,9 +118,9 @@ Link {
     height: 100%;
     color: #fff;
     -webkit-text-stroke: 6vw rgba(var(--bs-info-rgb), var(--bs-bg-opacity));
-    border-right: 1px solid aqua;
+    border-right: 0.2vw solid aqua;
     overflow: hidden;
-    animation: textanimate ease-in 10s infinite;
+    animation: textanimate ease-out 8s infinite;
 
 }
 
@@ -122,6 +128,7 @@ Link {
 
     0%,
     10%,
+    20%,
     100% {
         width: 0%;
     }
@@ -270,7 +277,9 @@ p {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
+.hoverclass{
+    position: relative;
+}
 .hoverclass .ba::after {
     content: '';
     position: absolute;
@@ -308,21 +317,23 @@ p {
 }
 
 .hoverclass {
+    position: absolute;
     height: 35vh;
     overflow: hidden;
     border: none;
     transition: transform 1s;
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .hoverclass .content {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     transform: translateY(170%);
-    left: 3.5em;
-    position: absolute;
 }
 
 .hoverclass:hover {
@@ -331,10 +342,12 @@ p {
 }
 
 .hoverclass:hover .content {
+    margin-top: 10%;
     transform: translateY(95%);
     transition: transform 1s;
 }
 .laptops .hoverclass {
+    position: relative;
     height: 40vh;
     overflow: hidden;
     border: none;
@@ -350,7 +363,7 @@ p {
     align-items: center;
     flex-direction: column;
     transform: translateY(180%);
-    left: 3.5em;
+    /* left: 3.5em; */
     position: absolute;
 }
 
@@ -371,6 +384,11 @@ p {
     position: relative;
 }
 
+.hoverclass .btn{
+    margin-top: 10%;
+    position: relative;
+}
+
 .hoverclass .btn::before {
     content: '';
     z-index: 1;
@@ -379,8 +397,8 @@ p {
     border-radius: 100%;
     border: 3px solid;
     position: absolute;
-    top: 64%;
-    left: 60%;
+    top: 80%;
+    /* left: 60%; */
     transform: translateX(0%);
     transition: transform 1s;
 }
@@ -393,14 +411,14 @@ p {
     height: 10px;
     border-radius: 100%;
     border: 3px solid;
-    top: 87%;
-    left: 35%;
+    top: -15%;
+    /* left: 35%; */
     transform: translateX(0%);
     transition: transform 1s;
 }
 
 .hoverclass .btn:hover::before {
-    transform: translateX(-60px);
+    transform: translateX(60px);
 }
 
 .hoverclass:hover .btn {
@@ -415,7 +433,7 @@ p {
 }
 
 .hoverclass .btn:hover::after {
-    transform: translateX(60px);
+    transform: translateX(-60px);
 }
 
 .details {
@@ -545,12 +563,22 @@ p {
 
 /* Media Query */
 
+@media (max-width: 1150px) {
+
+    .header-content ul li .lilink {
+        letter-spacing: 1.5px;
+        font-size: 15px;
+    }
+
+
+}
+
+
 @media (max-width: 700px) {
     * {
         margin: 0;
         padding: 0;
         width: auto;
-        overflow-x: hidden;
     }
 
     #Footer {
@@ -567,9 +595,15 @@ p {
     .footer1outer,
     #footer2outer,
     #footer3 {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
         margin: 0;
         padding: 0;
+        font-size: 15px;
     }
 
     .header {
@@ -623,6 +657,8 @@ p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 0;
+        padding: 0;
         /* flex-wrap: wrap; */
     }
 }
@@ -631,6 +667,7 @@ p {
 
 .allPrinters , .allLaptops{
     margin-bottom: 10%;
+    position: relative;
 }
 
 .allPrinters:nth-child(2) , .allLaptops:nth-child(3) {
@@ -649,6 +686,7 @@ p {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    left: 0;
     overflow: hidden;
 }
 .allPrinters:nth-child(2) .allcard .card .ribbon::before,
@@ -693,6 +731,7 @@ p {
     width: 100px;
     height: 100px;
     /* background-color: red; */
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
