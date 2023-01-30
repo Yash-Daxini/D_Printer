@@ -388,7 +388,9 @@ p {
     margin-top: 10%;
     position: relative;
 }
-
+.laptops .hoverclass .btn{
+    margin-top: 13%;
+}
 .hoverclass .btn::before {
     content: '';
     z-index: 1;
@@ -424,7 +426,12 @@ p {
 .hoverclass:hover .btn {
     padding: 5%;
 }
-
+.hoverclass .btn:hover{
+    margin-top: 0%;
+}
+.laptops .hoverclass .btn:hover{
+    margin-top: 0%;
+}
 .hoverclass .btn:hover {
     z-index: 1;
     color: white;
