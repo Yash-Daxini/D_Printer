@@ -318,7 +318,7 @@ p {
 
 .hoverclass {
     position: absolute;
-    height: 35vh;
+    /* height: 35vh; */
     overflow: hidden;
     border: none;
     transition: transform 1s;
@@ -327,16 +327,16 @@ p {
     align-items: center;
 }
 
-.hoverclass .content {
+/* .hoverclass .content {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     transform: translateY(170%);
-}
+} */
 
-.hoverclass:hover {
+/* .hoverclass:hover {
     height: 52vh;
     transition: 0.5s;
 }
@@ -345,10 +345,10 @@ p {
     margin-top: 10%;
     transform: translateY(95%);
     transition: transform 1s;
-}
+} */
 .laptops .hoverclass {
     position: relative;
-    height: 40vh;
+    /* height: 40vh; */
     overflow: hidden;
     border: none;
     transition: transform 1s;
@@ -357,25 +357,24 @@ p {
 .laptops .hoverclass img{
     height: 25vh;
 }
-.laptops .hoverclass .content {
+/* .laptops .hoverclass .content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     transform: translateY(180%);
-    /* left: 3.5em; */
     position: absolute;
-}
+} */
 
-.laptops .hoverclass:hover {
+/* .laptops .hoverclass:hover {
     height: 65vh;
     transition: 0.5s;
-}
+} */
 
-.laptops .hoverclass:hover .content {
+/* .laptops .hoverclass:hover .content {
     transform: translateY(130%);
     transition: transform 1s;
-}
+} */
 
 /* Card Button Animation */
 
@@ -423,9 +422,9 @@ p {
     transform: translateX(60px);
 }
 
-.hoverclass:hover .btn {
+/* .hoverclass:hover .btn {
     padding: 5%;
-}
+} */
 .hoverclass .btn:hover{
     margin-top: 0%;
 }
