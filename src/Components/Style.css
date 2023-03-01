@@ -425,16 +425,15 @@ p {
 /* .hoverclass:hover .btn {
     padding: 5%;
 } */
-.hoverclass .btn:hover{
+/* .hoverclass .btn:hover{
     margin-top: 0%;
 }
 .laptops .hoverclass .btn:hover{
     margin-top: 0%;
-}
+} */
 .hoverclass .btn:hover {
     z-index: 1;
     color: white;
-    z-index: 1;
     box-shadow: 0 0 20px aqua;
 }
 
