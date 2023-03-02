@@ -106,7 +106,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='text-center my-5'><h2>Experiance the Advantage</h2></div>
+            <div className='text-center my-5'><h2>Experience the Advantage</h2></div>
             <div className="homeImgL2 my-5">
                 <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664193290/Croma%20Assets/CMS/CAtegory/Laptop%20PCP%2020/UAT%20TESTING%20BANNER/UPDATE/PCP_Singlesplit_23Sep2022_ahitzz.png/mxw_1440,f_auto" alt="can't load" />
             </div>
